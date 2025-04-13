@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Base</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 flex flex-col h-screen">
+
+    <header class="bg-blue-500 text-white p-4">
+        <h1 class="text-xl font-bold">Lista de Tarefas</h1>
+    </header>
+
+    <main class="p-4 flex-grow">
+        <form>
+            <label for="tarefa">Título da tarefa</label>
+            <input id="newTask" class="block p-1 px-2 rounded border border-gray-300 mb-3 w-60" type="text" placeholder="Adicionar nova tarefa">
+            <button class="w-60 border border-gray-300 bg-blue-400 text-white p-1 px-2 rounded mb-10" type="submit">Submeter</button>
+        </form>
+        <label class="block text-lg font-semibold mb-3" for="list">Lista de Tarefas</label>
+        <ul id="taskList"></ul>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 text-center">
+        <p>&copy; 2025 Exercícios de Treino POO - António Amorim</p>
+    </footer>
+
+    <script type="module" src="/Exercícios de Treino/NLM/Exercício 1/script.js"></script>
+
+</body>
+</html>
