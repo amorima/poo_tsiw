@@ -1,9 +1,3 @@
-# Guia Rápido de Métodos e Conceitos JavaScript
-
-Esta parte abrange os fundamentos, estruturas de controlo e funções.
-
----
-
 ## 1. Fundamentos e Estruturas de Controlo
 
 ### 1.1. Variáveis e Tipos de Dados
