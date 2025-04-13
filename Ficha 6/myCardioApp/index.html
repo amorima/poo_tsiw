@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Tailwind CSS com CDN</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+    </style>
+</head>
+<body>
+<section class="bg-blue-600 p-5">
+    <h1 class="font-sans font-bold text-white text-3xl">myCardioApp</h1>
+    <p class="pt-5 pb-5 text-white">Coronary Risk Calculator</p>
+    <hr class="mt-5 mb-10 text-gray-400">
+</section>
+
+<section id="form" class="p-5">
+    <form>
+        <label class="font-medium" for="colesterol">Colesterol Total</label>
+        <input id="colesterol" class="border-1 border-gray-600 block rounded w-80 mt-1 mb-3 p-1 pl-2 hover:border-yellow-600" placeholder="Insira o colesterol total" type="text">
+
+        <label class="font-medium" for="colesterol">HDL (Lipoproteína de alta densidade)</label>
+        <input id="hdl" class="border-1 border-gray-600 block rounded w-80 mt-1 mb-3 p-1 pl-2 hover:border-yellow-600" placeholder="Insira o valor de HDL" type="text">
+
+        <label class="font-medium" for="colesterol">Triglicerídeos (TG)</label>
+        <input id="tri" class="border-1 border-gray-600 block rounded w-80 mt-1 mb-3 p-1 pl-2 hover:border-yellow-600" placeholder="Insira o valor de TG" type="text">
+
+        <button id="calcular" class="block mb-3 font-medium w-80 border-1 border-yellow-600 rounded p-1 bg-yellow-400 hover:bg-yellow-500 transition-colors duration-300  ease-in-out" type="button">Calcular LDL-C</button>
+
+        <label class="font-medium" for="colesterol">LDL (Lipoproteína baixa densidade)</label>
+        <input id="campoLdl" readonly class="border-1 border-gray-600 block rounded font-bold bg-gray-300 w-80 h-9 mt-1 mb-3 p-1 pl-2 focus:outline-none focus:border-gray-600 sm:text-sm" placeholder="O valor da LDL vai ser mostrado aqui" type="text">
+
+        <button id="submeter" class="block mb-3 text-white font-medium w-80 border-1 border-gray-950 rounded p-1 bg-gray-700 hover:bg-gray-950 transition-colors duration-300  ease-in-out" type="button">SUBMETER</button>
+    </form>
+</section>
+
+<section class="mt-10 p-5">
+    <div class="mb-5">
+        <label for="ldl">Filtrar Risco Coronário</label>
+        <select class="border-1 rounded p-0.5" name="ldl" id="ldl">
+            <option value="todos">Todos os registos</option>
+            <option value="alto risco">Alto Risco Coronário</option>
+            <option value="risco médio">Risco Coronário Médio</option>
+            <option value="baixo risco">Baixo Risco Coronário</option>
+        </select>
+        <button id="filtrar" class="ml-2 p-1 px-3 bg-[#28a745] rounded border-1 border-green-600 hover:bg-green-900 text-white" type="button">Filtrar Risco</button>
+        <button id="ordenarAsc" class="ml-2 p-1 px-3 bg-[#17a2b8] rounded border-1 border-cyan-600 hover:bg-cyan-900 text-white" type="button">↥ Ordenar LDL-C</button>
+        <button id="ordenarDesc" class="ml-2 p-1 px-3 bg-[#17a2b8] rounded border-1 border-cyan-600 hover:bg-cyan-900 text-white" type="button">↧ Ordenar LDL-C</button>
+    </div>
+    <div>
+        <hr class="text-gray-200 mb-5">
+        <table id="tabela" class="table-auto border-collapse border border-gray-400">
+            <tr class="bg-slate-200">
+                <th class="border border-gray-400 p-2 px-2">Colesterol</th>
+                <th class="border border-gray-400 p-2 px-2">HDL</th>
+                <th class="border border-gray-400 p-2 px-2">Triglicerídeos</th>
+                <th class="border border-gray-400 p-2 px-2">LDL</th>
+                <th class="border border-gray-400 p-2 px-2">Risco Cardiovascular</th>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+
+    <script type="module" src="/Ficha 6/myCardioApp/data.js"></script>
+</body>
+</html>
